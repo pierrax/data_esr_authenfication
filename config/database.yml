@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: esr_backend_development
+  database: data_esr_authentification_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: esr_backend_test
+  database: data_esr_authentification_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: esr_backend_production
-  username: esr_backend
-  password: <%= ENV['ESR_BACKEND_DATABASE_PASSWORD'] %>
+  database: data_esr_authentification_production
+  username: data_esr_authentification
+  password: <%= ENV['DATA_ESR_AUTHENTIFICATION_DATABASE_PASSWORD'] %>

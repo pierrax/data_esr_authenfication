@@ -1,24 +1,39 @@
-# README
+# DataESR Authentification
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+DataESR Authentification is a Rails open source microservice to manage Users and authentification through API. 
 
-Things you may want to cover:
+![Data ESR](public/data_esr_institutions_home.png)
 
-* Ruby version
+### Ruby version
 
-* System dependencies
+2.4.0
 
-* Configuration
+### Installation
 
-* Database creation
+First, clone down the repository:
 
-* Database initialization
+    git clone https://github.com/MinistereSupRecherche/data_esr_authenfication.git && cd data_esr_authentification
 
-* How to run the test suite
+Update dependencies, run:
 
-* Services (job queues, cache servers, search engines, etc.)
+    bundle install
 
-* Deployment instructions
+Create database, run:
 
-* ...
+    rake db:create
+
+Run migrations:
+
+    rake db:migrate
+    
+Populate database, run:
+     
+     rake db:seed
+    
+### Launch 
+
+In a console, launch the Rails server, run :
+
+    rails s
+
+That's it ! 
